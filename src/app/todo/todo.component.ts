@@ -46,14 +46,6 @@ export class TodoComponent implements OnInit {
   deleteDoneTask(i: number) {
     this.done.splice(i, 1);
   }
-  
-  addTask() {
-    this.tasks.push({
-      description: this.todoForm.value.item,
-      done: false,
-    });
-    this.todoForm.reset();
-  }
 
   updateTask() {
     this.tasks[this.updateIndex].description = this.todoForm.value.item;
@@ -78,4 +70,15 @@ export class TodoComponent implements OnInit {
       );
     }
   }
+
+  addTask() {
+    this.tasks.push({
+      description: this.todoForm.value.item,
+      done: false,
+    });
+    this.todoForm.reset();
+  }
+
+  
+
 }
